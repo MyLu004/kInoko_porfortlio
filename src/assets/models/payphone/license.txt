@@ -1,0 +1,11 @@
+Model Information:
+* title:	Orange Safe Zone [Street] Phone
+* source:	https://sketchfab.com/3d-models/orange-safe-zone-street-phone-688e6e03c24443a58ac1e9b305c2d935
+* author:	OrangeSafeZone (https://sketchfab.com/OrangeSafeZone)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Orange Safe Zone [Street] Phone" (https://sketchfab.com/3d-models/orange-safe-zone-street-phone-688e6e03c24443a58ac1e9b305c2d935) by OrangeSafeZone (https://sketchfab.com/OrangeSafeZone) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

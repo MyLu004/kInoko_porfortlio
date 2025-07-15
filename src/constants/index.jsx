@@ -48,15 +48,17 @@ export const navLinks = [
         name: 'Education',
         href: '#education',
     },
+
     {
         id: 6,
-        name: 'Resume',
-        href: '#resume',
-    },
-    {
-        id: 7,
         name: 'Contact',
         href: '#contact',
+    },
+
+    {
+        id: 7,
+        name: 'Resume',
+        href: '#resume',
     },
 ];
 
@@ -110,7 +112,7 @@ export const workExperiences = [
         id: 1,
         name: "OnStach AI Internship",
         pos: "AI Research Intern",
-        duration: "2025 - Present",
+        duration: "Summer 2025",
         title:
             "Worked on LLM summarization and document processing using Python, LangChain, Streamlit, and Ollama. Built tools for summarizing long documents and deployed an AI assistant for real-time article Q&A.",
         icon: "/assets/ai.svg", // You can customize this icon path
@@ -155,7 +157,7 @@ export const educationHistory = [
         id: 1,
         degree: "B.S. in Computer Science",
         school: "California State University, Long Beach",
-        duration: "2022 – Expected May 2026",
+        duration: "Graduate Expected: Spring 2026",
         items: [
             "President's Honor List",
             "University Honors Program",
@@ -169,8 +171,8 @@ export const educationHistory = [
         school: "Cornell Tech (Break Through Tech AI Program)",
         duration: "Summer 2024",
         items: [
-            "Completed AI certification through Cornell’s BTT program",
-            "Topics: Machine learning theory, supervised learning, Python projects",
+            "Completed AI certification through Cornell’s BTT program at UCLA",
+            "Topics: Machine learning theory, supervised learning",
         ],
     },
 ];

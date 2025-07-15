@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { navLinks } from '../constants/index.jsx';
 import "../index.css";
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const NavItems = ({ onClick = () => {} }) => (
     <ul className="nav-ul">
@@ -24,27 +26,37 @@ const Navbar = () => {
         <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-between items-center py-5 mx-auto c-space">
-                    <a href="/" className="text-orange-500 font-bold text-xl hover:text-brand-kinoko_orange transition-colors">
+                    <a
+                        href="/"
+                        className="text-orange-500 font-bold text-xl hover:text-brand-kinoko_orange transition-colors"
+                    >
                         My Lu
                     </a>
 
+                    {/* Toggle Button (React Icons) */}
                     <button
                         onClick={toggleMenu}
-                        className="bg-white hover:text-brand-kinoko_orange focus:outline-none sm:hidden flex"
+                        className="text-gray-600 hover:text-brand-kinoko_orange focus:outline-none sm:hidden flex"
                         aria-label="Toggle menu"
                     >
-                        <img src={isOpen ? 'assets/close.svg' : 'assets/menu.svg'} alt="toggle" className="w-6 h-6" />
+                        {isOpen ? (
+                            <FaTimes className="w-6 h-6" />
+                        ) : (
+                            <FaBars className="w-6 h-6" />
+                        )}
                     </button>
 
+                    {/* Desktop Menu */}
                     <nav className="sm:flex hidden bg-white">
                         <NavItems />
                     </nav>
                 </div>
             </div>
 
-            <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'}  `}>
-                <nav className="p-5 bg-white ">
-                    <NavItems  onClick={closeMenu} />
+            {/*Mobile Menu */}
+            <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'} transition-max-height duration-300 overflow-hidden`}>
+                <nav className="p-5 bg-white">
+                    <NavItems onClick={closeMenu} />
                 </nav>
             </div>
         </header>
