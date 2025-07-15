@@ -21,7 +21,6 @@ import {
 } from "react-icons/si";
 
 
-
 export const navLinks = [
     {
         id: 1,
@@ -70,14 +69,14 @@ export const myProjects = [
         subdesc:
             'Built for UCLA Hackathon using React Native and Gemini 1.5 API. Prioritized accessibility and secure data handling.',
         href: 'https://github.com/MyLu004/MedAssist',
-        texture: '/textures/project/medassist.mp4',
-        logo: '/assets/project-logo-medassist.png',
+        texture: '',
+        logo: '',
         logoStyle: {
             backgroundColor: '#1C1A43',
             border: '0.2px solid #252262',
             boxShadow: '0px 0px 60px 0px #635BFF4D',
         },
-        spotlight: '/assets/spotlight-medassist.png',
+
         tags: [
             { id: 1, name: 'React Native', icon: <FaReact /> },
             { id: 2, name: 'TailwindCSS', icon: <SiTailwindcss /> },
@@ -90,14 +89,14 @@ export const myProjects = [
         subdesc:
             'Developed using html, css, js. Prioritized accessibility and secure data handling.',
         href: 'https://mylu004.github.io/Task-Leaf/',
-        texture: '/textures/project/taskleaf.mp4',
-        logo: '/assets/project-logo-taskleaf.png',
+        texture: '',
+        logo: '',
         logoStyle: {
             backgroundColor: '#13202F',
             border: '0.2px solid #17293E',
             boxShadow: '0px 0px 60px 0px #2F6DB54D',
         },
-        spotlight: '/assets/spotlight-taskleaf.png',
+
         tags: [
             { id: 1, name: 'HTML', icon: <FaHtml5 /> },
             { id: 2, name: 'CSS', icon: <FaCss3Alt /> },
@@ -183,26 +182,35 @@ export const clubExperiences = [
         role: "Webmaster",
         org: "AI Research Club",
         duration: "2023 – 2025",
-        desc: "Managed and updated the club’s website, showcasing AI projects and research. Maintained accessibility, ensured responsive design, and integrated event schedules and resource hubs.",
-        image: "/assets/ai-club.png",
-        link: "https://airesearchclub.csulb.edu",
+        desc: "Designed and developed the AI Research Club’s official website. Maintained up-to-date content for meetings and events, prioritized accessibility, and ensured a responsive, user-friendly experience for members.",
+        image: "/club/AI_csulb_club.png",
+        link: "https://csulbairesearch.github.io/AI_Research_Website/",
     },
     {
         id: 2,
         role: "Web Lead",
-        org: "MarinaHack",
-        duration: "2024",
-        desc: "Led frontend development for MarinaHack 2024. Designed a landing page, managed sign-up integrations, and coordinated with organizers to maintain deadlines and announcements.",
-        image: "/assets/marinahack.png",
-        link: "https://marinahack.com",
+        org: "AI X DATA",
+        duration: "2025",
+        desc: "Led the frontend development for MarinaHack 2024’s website. Designed and built the landing page, integrated registration workflows, and collaborated with organizers to meet launch deadlines.",
+        image: "/club/AI_Data.png",
+        link: "https://datathoncsulb.netlify.app",
     },
     {
         id: 3,
+        role: "Web Co-Lead",
+        org: "MarinaHack",
+        duration: "2024",
+        desc: "Co-led a team of 12 developers to design and implement the MarinaHack 2024 website. Oversaw page structure, feature rollout, and team coordination to ensure a polished and on-time deployment.",
+        image: "/club/wicHackathon24.png",
+        link: "https://marina-hacks-3-0-r96wre70m-victoriamacalis-projects.vercel.app",
+    },
+    {
+        id: 4,
         role: "Webmaster",
         org: "Women in Computing (WIC)",
         duration: "2024 – 2025",
-        desc: "Oversaw the WIC website, ensuring timely updates for events, meetings, and outreach initiatives. Focused on inclusive design and clear, engaging content for club members.",
-        image: "/assets/wic.png",
-        link: "https://wic.csulb.edu",
+        desc: "Redesigned and managed the WIC website to promote events, outreach initiatives, and resources. Ensured timely updates, modern UI/UX, and an inclusive design for a diverse member base.",
+        image: "/club/wic_csubl_club.png",
+        link: "https://csulbwic.com",
     },
 ];

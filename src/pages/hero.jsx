@@ -98,7 +98,7 @@ const Hero = () => {
 
                 {/* Button */}
                 <a href="#contact" className="w-fit">
-                    <Button name="Let Connect :3" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+                    <Button name="Let Connect o(≧▽≦)o" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
                 </a>
             </div>
 

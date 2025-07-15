@@ -1,7 +1,16 @@
 // import gsap from 'gsap';
 // import { useGSAP } from '@gsap/react';
-import { useState } from 'react';
 import { myProjects } from '../constants/index.jsx'; // ensure this contains the JSX icon-based tags
+
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+import { Suspense, useState } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { Center, OrbitControls } from '@react-three/drei';
+//import {DemoComputer} from "../components/model_component/DemoComputer.jsx";
+import CanvasLoader from '../components/Loading.jsx';
+import { PerspectiveCamera } from '@react-three/drei';
 
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -22,13 +31,13 @@ const Projects = () => {
         });
     };
 
-    // useGSAP(() => {
-    //     gsap.fromTo(
-    //         `.animatedText`,
-    //         { opacity: 0 },
-    //         { opacity: 1, duration: 1, stagger: 0.2, ease: 'power2.inOut' }
-    //     );
-    // }, [selectedProjectIndex]);
+    useGSAP(() => {
+        gsap.fromTo(
+            `.animatedText`,
+            { opacity: 0 },
+            { opacity: 1, duration: 1, stagger: 0.2, ease: 'power2.inOut' }
+        );
+    }, [selectedProjectIndex]);
 
     const currentProject = myProjects[selectedProjectIndex];
 
@@ -105,12 +114,21 @@ const Projects = () => {
                 </div>
 
                 {/* Right static preview image (you can replace this with a screenshot or GIF) */}
-                <div className="border border-black-300 bg-black-200 rounded-lg h-96 flex items-center justify-center">
-                    <img
-                        src={currentProject.spotlight}
-                        alt="preview"
-                        className="w-full h-full object-cover rounded-lg"
-                    />
+                <div className="border border-black-300  rounded-lg h-96 flex items-center justify-center">
+                    {/*<Canvas>*/}
+
+                    {/*    <ambientLight intensity={Math.PI} />*/}
+                    {/*    <directionalLight position={[10, 10, 5]} />*/}
+                    {/*    <Center>*/}
+                    {/*        <Suspense fallback={<CanvasLoader />}>*/}
+                    {/*            <PerspectiveCamera makeDefault position={[0, 0, 10]} />*/}
+                    {/*            <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>*/}
+                    {/*                <DemoComputer scale={[0.5]} />*/}
+                    {/*            </group>*/}
+                    {/*        </Suspense>*/}
+                    {/*    </Center>*/}
+                    {/*    <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />*/}
+                    {/*</Canvas>*/}
                 </div>
             </div>
         </section>
