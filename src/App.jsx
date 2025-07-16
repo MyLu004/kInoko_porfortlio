@@ -7,6 +7,8 @@ import Education from "./pages/education";
 import Contact from "./pages/contact";
 import Footer from "./components/footer";
 
+
+
 const App = () => {
     return (
         <main className="max-w-7xl mx-auto relative ">

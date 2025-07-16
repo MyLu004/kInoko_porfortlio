@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import {
     FaPython,
     FaHtml5,
@@ -15,11 +19,9 @@ import {
     SiTailwindcss,
     SiFirebase,
     SiPostgresql,
-
     SiFastapi,
 } from "react-icons/si";
 
-// Grouped data
 const languageSkills = [
     { name: "Python", icon: <FaPython /> },
     { name: "C", icon: <SiC /> },
@@ -42,11 +44,18 @@ const toolSkills = [
 
 const SkillGrid = ({ title, skills }) => (
     <div className="w-full max-w-6xl mb-16">
-        <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-brand-kinoko_orange">{title}</h3>
+        <h3
+            className="text-xl sm:text-2xl font-semibold mb-6 text-brand-kinoko_orange"
+            data-aos="flip-up"
+        >
+            {title}
+        </h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             {skills.map((skill, idx) => (
                 <div
                     key={idx}
+                    data-aos="flip-up"
+                    data-aos-delay={idx * 100}
                     className="flex flex-col items-center justify-center bg-white px-4 py-6 rounded-xl shadow-lg hover:shadow-xl transition"
                 >
                     <span className="text-3xl text-brand-kinoko_orange mb-2">{skill.icon}</span>
@@ -58,12 +67,24 @@ const SkillGrid = ({ title, skills }) => (
 );
 
 const SkillSection = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: true, // only animate once
+        });
+    }, []);
+
     return (
         <section
             id="skill"
             className="min-h-screen w-full flex flex-col items-center justify-center c-space bg-[#FFFBF5] py-20"
         >
-            <h2 className="sm:text-4xl text-3xl font-semibold text-brand-kinoko_orange text-center mb-10">My Skills</h2>
+            <h2
+                className="sm:text-4xl text-3xl font-semibold text-brand-kinoko_orange text-center mb-10"
+                data-aos="fade"
+            >
+                My Skills
+            </h2>
 
             <SkillGrid title="Languages" skills={languageSkills} />
             <SkillGrid title="Tools & Frameworks" skills={toolSkills} />

@@ -48,7 +48,7 @@ const ContactForm = () => {
                     <textarea name="message" rows="4" required className="w-full border-b border-gray-400 focus:outline-none bg-transparent py-2" />
                 </div>
 
-                <button type="submit" className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-900 transition">
+                <button type="submit" className="bg-orange-400 text-white px-6 py-2 rounded-full hover:bg-orange-500 transition">
                     Send Message
                 </button>
 

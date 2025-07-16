@@ -1,13 +1,24 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { workExperiences } from "../constants/index.jsx";
 import { FaBriefcase } from "react-icons/fa";
 
 const ExperienceSection = () => {
+    useEffect(() => {
+        AOS.init({ duration: 800, once: true });
+    }, []);
+
     return (
         <section
             id="experience"
             className="w-full bg-[#FFFBF5] py-20 flex flex-col items-center justify-center c-space"
         >
-            <h2 className="head-text1 text-brand-kinoko_orange text-center mb-14">
+            <h2
+                className="head-text1 text-brand-kinoko_orange text-center mb-14"
+                data-aos="fade-up"
+            >
                 Work Experience
             </h2>
 
@@ -16,16 +27,30 @@ const ExperienceSection = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-brand-kinoko_orange"></div>
 
                 {/* Present Pointer */}
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-brand-kinoko_orange text-white px-3 py-1 rounded-full text-xs font-medium shadow-md">
-                    Present
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10">
+                    <div
+                        data-aos="zoom-in"
+                        className="bg-brand-kinoko_orange text-white px-3 py-1 rounded-full text-xs font-medium shadow-md"
+                    >
+                        Present
+                    </div>
                 </div>
 
                 {workExperiences.map((exp, index) => {
                     const isLeft = index % 2 === 0;
+                    const animationType = isLeft ? "fade-right" : "fade-left";
+
                     return (
-                        <div key={exp.id} className="mb-16 flex justify-between items-center w-full">
+                        <div
+                            key={exp.id}
+                            className="mb-16 flex justify-between items-center w-full"
+                        >
                             {/* Left side */}
-                            <div className={`w-5/12 ${isLeft ? "" : "hidden sm:block"}`}>
+                            <div
+                                className={`w-5/12 ${isLeft ? "" : "hidden sm:block"}`}
+                                data-aos={animationType}
+                                data-aos-delay={index * 100}
+                            >
                                 {isLeft && (
                                     <div className="bg-white p-6 rounded-xl shadow-md">
                                         <h3 className="text-lg font-semibold text-brand-kinoko_orange">
@@ -40,13 +65,21 @@ const ExperienceSection = () => {
 
                             {/* Timeline Icon */}
                             <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                                <div className="w-10 h-10 bg-brand-kinoko_orange text-white rounded-full flex items-center justify-center shadow-lg">
+                                <div
+                                    className="w-10 h-10 bg-brand-kinoko_orange text-white rounded-full flex items-center justify-center shadow-lg"
+                                    data-aos="zoom-in"
+                                    data-aos-delay={index * 100 + 100}
+                                >
                                     <FaBriefcase />
                                 </div>
                             </div>
 
                             {/* Right side */}
-                            <div className={`w-5/12 ${!isLeft ? "" : "hidden sm:block"}`}>
+                            <div
+                                className={`w-5/12 ${!isLeft ? "" : "hidden sm:block"}`}
+                                data-aos={animationType}
+                                data-aos-delay={index * 100}
+                            >
                                 {!isLeft && (
                                     <div className="bg-white p-6 rounded-xl shadow-md">
                                         <h3 className="text-lg font-semibold text-brand-kinoko_orange">

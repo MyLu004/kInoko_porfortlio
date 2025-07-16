@@ -58,7 +58,7 @@ const Hero = () => {
             {/* Hero text */}
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3 z-10">
                 <p className="sm:text-3xl text-xl font-medium text-black text-center font-generalsans">
-                    <span className="waving-hand">🍄</span> Hi, I am Kinoko <span className="waving-hand">🍄</span>
+                    <span className="waving-hand">👋</span> Hi, I am My Lu <span className="waving-hand"> 🌷 </span>
                 </p>
                 <p className="hero_tag text-orange_gradient text-center">
                     {displayText}
@@ -97,9 +97,16 @@ const Hero = () => {
                 </div>
 
                 {/* Button */}
-                <a href="#contact" className="w-fit">
-                    <Button name="Let Connect o(≧▽≦)o" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
-                </a>
+                <div className="sm:flex flex-row space-x-4">
+                    <a href="#contact" className="w-fit">
+                        <Button name="Let Connect 🔗" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+                    </a>
+
+                    <a href="#resume" className="w-fit">
+                        <Button name="See my Resume📄 " isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+                    </a>
+                </div>
+
             </div>
 
 
