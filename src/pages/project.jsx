@@ -5,15 +5,18 @@ import { myProjects } from '../constants/index.jsx'; // ensure this contains the
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-import { Suspense, useState } from 'react';
+
+import { ComputerModel } from '../components/model_component/computer.jsx';
+
+import React, { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Center, OrbitControls } from '@react-three/drei';
-//import {DemoComputer} from "../components/model_component/DemoComputer.jsx";
 import CanvasLoader from '../components/Loading.jsx';
 import { PerspectiveCamera } from '@react-three/drei';
 
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import {PayPhone} from "../components/model_component/payphone.jsx";
 
 
 const projectCount = myProjects.length;
@@ -115,20 +118,15 @@ const Projects = () => {
 
                 {/* Right static preview image (you can replace this with a screenshot or GIF) */}
                 <div className="border border-black-300  rounded-lg h-96 flex items-center justify-center">
-                    {/*<Canvas>*/}
+                    <Canvas>
+                        <Suspense fallback={<CanvasLoader/>}>
+                            <PerspectiveCamera makeDefault position={[0, 3, 50]} fov={10} />
+                            <ambientLight intensity={0.8} />
+                            <directionalLight position={[5, 5, 5]} intensity={1.2} castShadow />
+                            <ComputerModel/>
+                        </Suspense>
 
-                    {/*    <ambientLight intensity={Math.PI} />*/}
-                    {/*    <directionalLight position={[10, 10, 5]} />*/}
-                    {/*    <Center>*/}
-                    {/*        <Suspense fallback={<CanvasLoader />}>*/}
-                    {/*            <PerspectiveCamera makeDefault position={[0, 0, 10]} />*/}
-                    {/*            <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>*/}
-                    {/*                <DemoComputer scale={[0.5]} />*/}
-                    {/*            </group>*/}
-                    {/*        </Suspense>*/}
-                    {/*    </Center>*/}
-                    {/*    <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />*/}
-                    {/*</Canvas>*/}
+                    </Canvas>
                 </div>
             </div>
         </section>
