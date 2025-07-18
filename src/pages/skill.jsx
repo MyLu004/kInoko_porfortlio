@@ -24,7 +24,7 @@ import {
 
 const languageSkills = [
     { name: "Python", icon: <FaPython /> },
-    { name: "C", icon: <SiC /> },
+
     { name: "C++", icon: <SiCplusplus /> },
     { name: "C#", icon: <SiDotnet /> },
     { name: "HTML", icon: <FaHtml5 /> },

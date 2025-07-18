@@ -57,7 +57,9 @@ export const navLinks = [
     {
         id: 7,
         name: 'Resume',
-        href: '#resume',
+        href: 'https://drive.google.com/file/d/1wj4rX3Rnj6GQxAfyJ2JFpq7dG40ihSxb/view?usp=sharing',
+        external: true
+
     },
 ];
 
@@ -68,9 +70,9 @@ export const myProjects = [
         desc: 'A React Native app designed to help elderly users manage their medication schedules and reminders.',
         subdesc:
             'Built for UCLA Hackathon using React Native and Gemini 1.5 API. Prioritized accessibility and secure data handling.',
-        href: 'https://github.com/MyLu004/MedAssist',
-        texture: '',
-        logo: '',
+        href: 'https://devpost.com/software/medassist-ut5qor',
+        texture: '/project/medAssist.png',
+        logo: '/project/medAssistIcon.png',
         logoStyle: {
             backgroundColor: '#1C1A43',
             border: '0.2px solid #252262',
@@ -89,8 +91,8 @@ export const myProjects = [
         subdesc:
             'Developed using html, css, js. Prioritized accessibility and secure data handling.',
         href: 'https://mylu004.github.io/Task-Leaf/',
-        texture: '',
-        logo: '',
+        texture: '/project/TaskLeaf.png',
+        logo: '/project/TaskLeafIcon.png',
         logoStyle: {
             backgroundColor: '#13202F',
             border: '0.2px solid #17293E',

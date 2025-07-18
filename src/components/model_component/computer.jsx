@@ -6,8 +6,8 @@ Source: https://sketchfab.com/3d-models/terminal-styled-computer-dumb-terminal-c
 Title: Terminal-styled Computer (Dumb Terminal)
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef, useEffect, useState } from 'react'
+import { useGLTF, useTexture } from '@react-three/drei';
 import {useFrame} from "@react-three/fiber";
 
 export function ComputerModel(props) {
@@ -15,17 +15,40 @@ export function ComputerModel(props) {
         new URL('../../assets/models/computer/scene.gltf', import.meta.url).href
     );
 
+    const screenTexture = props.texture ? useTexture(props.texture) : null;
 
     const ref = useRef();
+    const [startTime] = useState(() => performance.now());
+
+    const initialRotation = Math.PI / 2;
+    const duration = 1000;
+    const txt = props.txt;
+
+
+    const baseRotationY = props.rotation?.[1] || 0;
+
+
+
+    useEffect(() => {
+        if (ref.current) {
+            ref.current.rotation.y = baseRotationY + initialRotation;
+        }
+    }, [txt]);
+
 
     useFrame(() => {
-        if (ref.current) {
-            ref.current.rotation.y += 0.005; // Adjust speed here
-        }
+        if (!ref.current) return;
+
+        const elapsed = performance.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+
+        ref.current.rotation.y = baseRotationY + initialRotation * (1 - eased);
     });
+
   return (
-    <group {...props} dispose={null} ref={ref}>
-      <group position={[0, 0.043, 0.102]} scale={[1.1, 0.7, 0.7]}>
+    <group {...props} dispose={null} ref={ref} >
+      <group position={[0, 0.043, 0.102]} scale={[1.1, 0.7, 0.7]} >
         <mesh
           castShadow
           receiveShadow
@@ -275,7 +298,9 @@ export function ComputerModel(props) {
         geometry={nodes.Object_23.geometry}
         material={materials.screen}
         position={[0, 3.074, 0.006]}
-      />
+      >
+          <meshBasicMaterial map={screenTexture} toneMapped={false} />
+      </mesh>
       <mesh
         castShadow
         receiveShadow
@@ -306,21 +331,21 @@ export function ComputerModel(props) {
 
 
         {/*cable*/}
-      {/*<mesh*/}
-      {/*  castShadow*/}
-      {/*  receiveShadow*/}
-      {/*  geometry={nodes.Object_51.geometry}*/}
-      {/*  material={materials.black}*/}
-      {/*  position={[3.216, 0.79, -1.27]}*/}
-      {/*  scale={[1.011, 1, 1]}*/}
-      {/*/>*/}
-      {/*<mesh*/}
-      {/*  castShadow*/}
-      {/*  receiveShadow*/}
-      {/*  geometry={nodes.Object_53.geometry}*/}
-      {/*  material={materials.black}*/}
-      {/*  position={[-2.581, 0.412, -2.565]}*/}
-      {/*/>*/}
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_51.geometry}
+        material={materials.black}
+        position={[3.216, 0.79, -1.27]}
+        scale={[1.011, 1, 1]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Object_53.geometry}
+        material={materials.black}
+        position={[-2.581, 0.412, -2.565]}
+      />
     </group>
   )
 }

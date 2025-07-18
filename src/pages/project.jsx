@@ -21,6 +21,7 @@ import {PayPhone} from "../components/model_component/payphone.jsx";
 
 const projectCount = myProjects.length;
 
+
 const Projects = () => {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
@@ -43,6 +44,7 @@ const Projects = () => {
     }, [selectedProjectIndex]);
 
     const currentProject = myProjects[selectedProjectIndex];
+    const activeProjectId = currentProject.title;
 
     return (
         <section className="min-h-screen w-full flex items-center justify-center flex-col c-space" id={"project"}>
@@ -54,12 +56,9 @@ const Projects = () => {
 
 
                     {/* Logo */}
-                    <div
-                        className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg z-10"
-                        style={currentProject.logoStyle}
-                    >
+                    <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center shadow-md z-10">
                         <img
-                            className="w-10 h-10 shadow-sm"
+                            className="w-15 h-15 object-contain"
                             src={currentProject.logo}
                             alt="logo"
                         />
@@ -117,13 +116,13 @@ const Projects = () => {
                 </div>
 
                 {/* Right static preview image (you can replace this with a screenshot or GIF) */}
-                <div className="border border-black-300  rounded-lg h-96 flex items-center justify-center">
+                <div className=" border border-black-300  rounded-lg h-96 flex items-center justify-center">
                     <Canvas>
                         <Suspense fallback={<CanvasLoader/>}>
                             <PerspectiveCamera makeDefault position={[0, 3, 50]} fov={10} />
                             <ambientLight intensity={0.8} />
                             <directionalLight position={[5, 5, 5]} intensity={1.2} castShadow />
-                            <ComputerModel/>
+                            <ComputerModel  key={activeProjectId} txt={activeProjectId} texture={currentProject.texture} rotation={[0, -0.3, 0]} />
                         </Suspense>
 
                     </Canvas>
