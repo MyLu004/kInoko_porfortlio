@@ -102,7 +102,7 @@ const Hero = () => {
                         <Button name="Let Connect 🔗" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
                     </a>
 
-                    <a href="#resume" className="w-fit">
+                    <a href="https://drive.google.com/file/d/1dpZpmbI2NBid-k8sa11SuGsZ0Z5M4uul/view?usp=sharing" target={"_blank"} className="w-fit">
                         <Button name="See my Resume📄 " isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
                     </a>
                 </div>
