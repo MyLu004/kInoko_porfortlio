@@ -2,9 +2,8 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function MushroomModel(props) {
-    const { nodes, materials } = useGLTF(
-        new URL('../../assets/models/mushroom/scene.gltf', import.meta.url).href
-    );
+    const { nodes, materials } = useGLTF('/assets/models/mushroom/scene.gltf');
+
 
     return (
         <group {...props} dispose={null}>
@@ -24,6 +23,4 @@ export function MushroomModel(props) {
     );
 }
 
-useGLTF.preload(
-    new URL('../../assets/models/mushroom/scene.gltf', import.meta.url).href
-);
+useGLTF.preload('/assets/models/mushroom/scene.gltf');

@@ -11,9 +11,7 @@ import { useGLTF, useTexture } from '@react-three/drei';
 import {useFrame} from "@react-three/fiber";
 
 export function ComputerModel(props) {
-    const { nodes, materials } = useGLTF(
-        new URL('../../assets/models/computer/scene.gltf', import.meta.url).href
-    );
+    const { nodes, materials } = useGLTF('/assets/models/computer/scene.gltf');
 
     const screenTexture = props.texture ? useTexture(props.texture) : null;
 
@@ -350,6 +348,4 @@ export function ComputerModel(props) {
   )
 }
 
-useGLTF.preload(
-    new URL('../../assets/models/computer/scene.gltf', import.meta.url).href
-);
+useGLTF.preload('/assets/models/computer/scene.gltf');

@@ -163,7 +163,7 @@ export const educationHistory = [
             "President's Honor List",
             "University Honors Program",
             "GPA: 3.9 (Expected Graduation: May 2026)",
-            "Courses: Algorithms, Systems Programming, AI/ML, Databases, Distributed Systems, Computer Graphics",
+            "Courses: Calculus 2, Algorithms, Assembly, Data Structure, OOP, Discrete Math, Computer Architecture,Linear Algebra, System Programming, Operating System, Database",
         ],
     },
     {

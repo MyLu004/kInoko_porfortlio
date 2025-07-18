@@ -4,9 +4,7 @@ import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
 export function PayPhone(props) {
-    const { nodes, materials } = useGLTF(
-        new URL('../../assets/models/payphone/scene.gltf', import.meta.url).href
-    );
+    const { nodes, materials } = useGLTF('/assets/models/payphone/scene.gltf');
 
     const ref = useRef();
 
@@ -58,6 +56,4 @@ export function PayPhone(props) {
     )
 }
 
-useGLTF.preload(
-    new URL('../../assets/models/payphone/scene.gltf', import.meta.url).href
-);
+useGLTF.preload('/assets/models/payphone/scene.gltf');

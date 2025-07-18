@@ -10,9 +10,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function CanvasModel(props) {
-    const { nodes, materials } = useGLTF(
-        new URL('../../assets/models/canvas/scene.gltf', import.meta.url).href
-    );
+    const { nodes, materials } = useGLTF('/assets/models/canvas/scene.gltf');
     return (
         <group {...props} dispose={null}>
             <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -28,6 +26,4 @@ export function CanvasModel(props) {
     )
 }
 
-useGLTF.preload(
-    new URL('../../assets/models/canvas/scene.gltf', import.meta.url).href
-);
+useGLTF.preload('/assets/models/canvas/scene.gltf');
