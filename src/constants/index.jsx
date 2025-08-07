@@ -66,6 +66,47 @@ export const navLinks = [
 
 export const myProjects = [
     {
+        title: 'Healthcare Patient Dashboard',
+        desc: 'A modern web application for healthcare professionals to manage patient vitals data and appointments.',
+        subdesc:
+            'Built using React, FastAPI, and PostgreSQL. Focused on secure data handling and responsive design.',
+        href: 'https://healthcare-patient-dashboard.vercel.app',
+        texture: '/project/HealthDashboard.png',
+        logo: '/project/HealthDashboardIcon.png',
+        logoStyle: {
+            backgroundColor: '#1C1A43',
+            border: '0.2px solid #252262',
+            boxShadow: '0px 0px 60px 0px #635BFF4D',
+        },
+
+        tags: [
+            { id: 1, name: 'React Native', icon: <FaReact /> },
+            { id: 2, name: 'FastAPI', icon: <SiFastapi /> },
+            { id: 3, name: 'PostgreSQL', icon: <SiPostgresql /> },
+        ],
+    },
+    {
+        title: 'Chatbot Application',
+        desc: 'An interactive AI chatbot web applicaiton using LLMs (like Llama, GPT, Mistral) with a responsive React frontend and FastAPI backend. Designed to simulate intelligent conversations with support for chat memory, multiple model, and an intuitive UI',
+        subdesc:
+            'Built using React, FastAPI, PostgreSQL, Ollama and LangChain.',
+        href: 'https://github.com/MyLu004/OnTash---Intership/tree/master/ChatBot',
+        texture: '/project/Chatbot.png',
+        logo: '/project/ChatbotIcon.png',
+        logoStyle: {
+            backgroundColor: '#1C1A43',
+            border: '0.2px solid #252262',
+            boxShadow: '0px 0px 60px 0px #635BFF4D',
+        },
+
+        tags: [
+            { id: 1, name: 'React Native', icon: <FaReact /> },
+            { id: 2, name: 'TailwindCSS', icon: <SiTailwindcss /> },
+            { id: 3, name: 'FastAPI', icon: <SiFastapi /> },
+            { id: 4, name: 'PostgreSQL', icon: <SiPostgresql /> },
+        ],
+    },
+    {
         title: 'MedAssist - Elderly Health Companion',
         desc: 'A React Native app designed to help elderly users manage their medication schedules and reminders.',
         subdesc:
@@ -86,10 +127,10 @@ export const myProjects = [
         ],
     },
     {
-        title: 'Task Leaf - Productivity App',
-        desc: 'Helps users stay organized with task tracking and real-time updates.',
+        title: 'Task Leaf - ToDo App',
+        desc: 'Allow user creating and tracking their tasks. Design in Animal Crossing theme :3 ',
         subdesc:
-            'Developed using html, css, js. Prioritized accessibility and secure data handling.',
+            'Developed using html, css, javascript',
         href: 'https://mylu004.github.io/Task-Leaf/',
         texture: '/project/TaskLeaf.png',
         logo: '/project/TaskLeafIcon.png',

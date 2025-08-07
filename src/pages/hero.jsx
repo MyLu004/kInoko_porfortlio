@@ -3,7 +3,7 @@ import { Leva } from 'leva';
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { PerspectiveCamera } from '@react-three/drei';
-import { useControls } from 'leva';
+// import { useControls } from 'leva';
 import HeroCamera from '../components/heroCamera.jsx';
 import Button from '../components/Button.jsx';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
@@ -99,10 +99,10 @@ const Hero = () => {
                 {/* Button */}
                 <div className="sm:flex flex-row space-x-4">
                     <a href="#contact" className="w-fit">
-                        <Button name="Let Connect 🔗" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+                        <Button name="Let's Connect 🔗" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
                     </a>
 
-                    <a href="https://drive.google.com/file/d/1dpZpmbI2NBid-k8sa11SuGsZ0Z5M4uul/view?usp=sharing" target={"_blank"} className="w-fit">
+                    <a href="https://drive.google.com/file/d/1leUgI40loTmpxCIQLxX3kXOqudlvc-VR/view?usp=sharing" target={"_blank"} className="w-fit">
                         <Button name="See my Resume📄 " isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
                     </a>
                 </div>
