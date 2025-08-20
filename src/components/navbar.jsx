@@ -4,6 +4,8 @@ import "../index.css";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
+
+
 const NavItems = ({ onClick = () => {} }) => (
     <ul className="nav-ul">
         {navLinks.map((item) => (

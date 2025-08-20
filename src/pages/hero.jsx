@@ -11,6 +11,8 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import CanvasLoader from '../components/Loading.jsx';
 import { MushroomModel } from '../components/model_component/mushroom.jsx';
 
+import { resume } from '../constants/index.jsx';
+
 const sentences = [
     "Welcome to my portfolio!",
     "I am a student passionate about coding",
@@ -102,7 +104,7 @@ const Hero = () => {
                         <Button name="Let's Connect 🔗" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
                     </a>
 
-                    <a href="https://drive.google.com/file/d/1leUgI40loTmpxCIQLxX3kXOqudlvc-VR/view?usp=sharing" target={"_blank"} className="w-fit">
+                    <a href={resume[0].href} target={"_blank"} className="w-fit">
                         <Button name="See my Resume📄 " isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
                     </a>
                 </div>

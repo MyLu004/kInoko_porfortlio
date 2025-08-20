@@ -21,6 +21,14 @@ import {
 } from "react-icons/si";
 
 
+
+export const resume = [
+    {
+        name: "Download Resume",
+        href: "https://drive.google.com/file/d/1leUgI40loTmpxCIQLxX3kXOqudlvc-VR/view?usp=sharing",
+    },
+]
+
 export const navLinks = [
     {
         id: 1,
@@ -57,7 +65,7 @@ export const navLinks = [
     {
         id: 7,
         name: 'Resume',
-        href: 'https://drive.google.com/file/d/1dpZpmbI2NBid-k8sa11SuGsZ0Z5M4uul/view?usp=sharing',
+        href: resume[0].href,
         external: true
 
     },
@@ -71,6 +79,7 @@ export const myProjects = [
         subdesc:
             'Built using React, FastAPI, and PostgreSQL. Focused on secure data handling and responsive design.',
         href: 'https://healthcare-patient-dashboard.vercel.app',
+        github: 'https://github.com/MyLu004/Healthcare-Patient-Dashboard',
         texture: '/project/HealthDashboard.png',
         logo: '/project/HealthDashboardIcon.png',
         logoStyle: {
@@ -91,6 +100,7 @@ export const myProjects = [
         subdesc:
             'Built using React, FastAPI, PostgreSQL, Ollama and LangChain.',
         href: 'https://github.com/MyLu004/OnTash---Intership/tree/master/ChatBot',
+        github: 'https://github.com/MyLu004/OnTash---Intership/blob/master/ChatBot/README.md',
         texture: '/project/Chatbot.png',
         logo: '/project/ChatbotIcon.png',
         logoStyle: {
@@ -112,6 +122,7 @@ export const myProjects = [
         subdesc:
             'Built for UCLA Hackathon using React Native and Gemini 1.5 API. Prioritized accessibility and secure data handling.',
         href: 'https://devpost.com/software/medassist-ut5qor',
+        github: 'https://github.com/MyLu004/MedAssist',
         texture: '/project/medAssist.png',
         logo: '/project/medAssistIcon.png',
         logoStyle: {
@@ -132,6 +143,7 @@ export const myProjects = [
         subdesc:
             'Developed using html, css, javascript',
         href: 'https://mylu004.github.io/Task-Leaf/',
+        github: 'https://github.com/MyLu004/Task-Leaf',
         texture: '/project/TaskLeaf.png',
         logo: '/project/TaskLeafIcon.png',
         logoStyle: {
@@ -257,3 +269,4 @@ export const clubExperiences = [
         link: "https://csulbwic.com",
     },
 ];
+
