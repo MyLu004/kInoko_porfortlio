@@ -268,5 +268,14 @@ export const clubExperiences = [
         image: "/club/wic_csubl_club.png",
         link: "https://csulbwic.com",
     },
+    {
+        id: 5,
+        role: "Backend Lead",
+        org: "BMES - Medtronic 2026",
+        duration: "2025 – 2026",
+        desc: "Led backend development for a full-stack IoT healthcare system, designing a serverless architecture on AWS (Lambda, API Gateway, DynamoDB)",
+        image: "/club/wic_csubl_club.png",
+        // link: "",
+    },
 ];
 
