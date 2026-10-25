@@ -20,27 +20,26 @@ export default function Postcard({ contact, resume }) {
     const [status, setStatus] = useState('idle');
     const stickers = [...contact.links, { label: resume.label, url: resume.url }];
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
         setStatus('sending');
 
-        emailjs
-            .sendForm(
-                import.meta.env.EMAILJS_SERVICE_ID,
-                import.meta.env.EMAILJS_TEMPLATE_ID,
+        // Names must start with VITE_: Vite only exposes VITE_* variables to browser code.
+        // emailjs throws synchronously (not a rejected promise) when a key is missing,
+        // so await inside try/catch covers both cases.
+        try {
+            await emailjs.sendForm(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 form.current,
-                import.meta.env.EMAILJS_PUBLIC_KEY
-            )
-            .then(
-                () => {
-                    setStatus('sent');
-                    form.current.reset();
-                },
-                (error) => {
-                    console.error('Email failed', error?.text ?? error);
-                    setStatus('error');
-                }
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
+            setStatus('sent');
+            form.current.reset();
+        } catch (error) {
+            console.error('Email failed', error?.text ?? error);
+            setStatus('error');
+        }
     };
 
     return (
