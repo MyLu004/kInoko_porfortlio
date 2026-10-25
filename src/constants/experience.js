@@ -1,0 +1,68 @@
+// Newest first; `current` jobs lead the trail. The future chatbot can reuse this
+// file (optional `question` / `answer` fields per job).
+export const experiences = [
+     {
+        id: 'Applied Medical',
+        role: 'Front-end Software Engineering',
+        company: 'Applied Medical (Rancho Santa Margarita)',
+        dates: 'Oct 2026 - Present',
+        description: 'Built responsive, accessible web applications with React, TypeScript, and JavaScript, creating reusable UI components and integrating REST APIs. Collaborated with cross-functional teams using Azure Boards, Git, and Agile practices to deliver scalable applications and maintain code quality.',
+        tags: ['Frontend','Hasura','Postman', 'Git/Github','CI/CD' , 'React', 'JavaScript', 'REST APIs', 'Tailwind CSS', 'Azure'],
+        current: true,
+    },
+     {
+        id: 'Applied Medical',
+        role: 'Front end Intern',
+        company: 'Applied Medical (Rancho Santa Margarita)',
+        dates: 'May 2026 - Sept 2026',
+        description: 'Built responsive, accessible web applications with React, TypeScript, and JavaScript, creating reusable UI components and integrating REST APIs. Collaborated with cross-functional teams using Azure Boards, Git, and Agile practices to deliver scalable applications and maintain code quality.',
+        tags: ['Frontend', 'Git/Github','CI/CD' , 'React','JavaScript', 'REST APIs', 'Tailwind CSS', 'Azure'],
+        current: false,
+    },
+
+     {
+        id: 'Code Ninjas',
+        role: 'Coding Tutor',
+        company: 'Code Ninjas (Los Alamitos)',
+        dates: 'Sept 2025 – April 2026',
+        description: 'Instructed K-12 students on the fundamentals of coding with Code Blocks, JavaScript, and C# (Unity), teaching the lessons in an interactive and age-appropriate way.',
+        tags: ['Coding','Code Blocks', 'JavaScript', 'C#', 'Unity'],
+        current: false,
+    },
+    {
+        id: 'besst',
+        role: 'STEM Tutor – Calculus & Precalculus',
+        company: 'BESST (CSULB)',
+        dates: 'Oct 2023 – May 2026',
+        description: 'Tutored students in Calculus I & II and foundational Precalculus topics. Collaborated with faculty to align support with class material and guided students through exam prep.',
+        tags: ['Calculus I & II', 'Precalculus', 'Exam prep'],
+        current: false,
+    },
+    {
+        id: 'onstach',
+        role: 'AI Research Intern',
+        company: 'OnStach AI Internship',
+        dates: 'Summer 2025',
+        description: 'Worked on LLM summarization and document processing. Built tools for summarizing long documents and deployed an AI assistant for real-time article Q&A.',
+        tags: ['Python', 'LangChain', 'Streamlit', 'Ollama'],
+        current: false,
+    },
+    {
+        id: 'zero-robotics',
+        role: 'Tutor & Mentor',
+        company: 'Zero Robotics',
+        dates: 'Summer 2023, 2024',
+        description: 'Guided middle school students in algorithm development and robotics programming, using age-appropriate examples and hands-on coding challenges.',
+        tags: ['Algorithms', 'Robotics', 'Mentoring'],
+        current: false,
+    },
+    {
+        id: 'csulb-research',
+        role: 'Student Research Assistant',
+        company: 'CSULB',
+        dates: 'Sep 2022 – Dec 2022',
+        description: 'Assisted faculty with research design, literature review, and methodology development in support of faculty-led academic projects.',
+        tags: ['Research design', 'Literature review'],
+        current: false,
+    },
+];

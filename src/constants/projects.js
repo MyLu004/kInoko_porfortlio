@@ -1,0 +1,68 @@
+// Filter chips, in order. Each project's `category` must be one of these (besides 'All').
+export const projectCategories = ['All', 'Web', 'Mobile', 'AI'];
+
+// image: screenshot under /public (null → `initials` on the pastel backdrop)
+// imageFit: 'cover' for screenshots, 'contain' for device renders
+// backdrop: peach | butter | pink | mint
+export const projects = [
+    {
+        id: 'medassist',
+        no: 1,
+        title: 'MedAssist – Elderly Health Companion',
+        description: 'A React Native app that helps elderly users manage medication schedules and reminders. Built at UCLA Hackathon with the Gemini 1.5 API.',
+        tags: ['React Native', 'TailwindCSS', 'Firebase'],
+        category: 'Mobile',
+        image: '/project/medAssist.png',
+        imageFit: 'cover',
+        backdrop: 'peach',
+        initials: 'MA',
+        liveUrl: 'https://devpost.com/software/medassist-ut5qor',
+        githubUrl: 'https://github.com/MyLu004/MedAssist',
+        featured: true,
+    },
+    {
+        id: 'healthcare-dashboard',
+        no: 2,
+        title: 'Healthcare Patient Dashboard',
+        description: 'A web app for healthcare professionals to manage patient vitals and appointments, focused on secure data handling and responsive design.',
+        tags: ['React', 'FastAPI', 'PostgreSQL'],
+        category: 'Web',
+        image: '/project/HealthDashboard.png',
+        imageFit: 'cover',
+        backdrop: 'mint',
+        initials: 'HD',
+        liveUrl: 'https://healthcare-patient-dashboard.vercel.app',
+        githubUrl: 'https://github.com/MyLu004/Healthcare-Patient-Dashboard',
+        featured: false,
+    },
+    {
+        id: 'chatbot',
+        no: 3,
+        title: 'Chatbot Application',
+        description: 'An AI chatbot for LLMs like Llama, GPT and Mistral, with chat memory, multiple models and a responsive React UI on a FastAPI backend.',
+        tags: ['React', 'FastAPI', 'PostgreSQL', 'LangChain'],
+        category: 'AI',
+        image: '/project/Chatbot.png',
+        imageFit: 'cover',
+        backdrop: 'pink',
+        initials: 'AI',
+        liveUrl: null,
+        githubUrl: 'https://github.com/MyLu004/OnTash---Intership/tree/master/ChatBot',
+        featured: false,
+    },
+    {
+        id: 'task-leaf',
+        no: 4,
+        title: 'Task Leaf – ToDo App',
+        description: 'Create and track your tasks in an Animal Crossing themed to-do app :3',
+        tags: ['HTML', 'CSS', 'JavaScript'],
+        category: 'Web',
+        image: '/project/TaskLeaf.png',
+        imageFit: 'cover',
+        backdrop: 'butter',
+        initials: 'TL',
+        liveUrl: 'https://mylu004.github.io/Task-Leaf/',
+        githubUrl: 'https://github.com/MyLu004/Task-Leaf',
+        featured: false,
+    },
+];

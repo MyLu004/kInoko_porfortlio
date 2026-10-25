@@ -1,0 +1,68 @@
+export const education = {
+    degrees: [
+        {
+            id: 'csulb-bs',
+            title: 'B.S. in Computer Science',
+            school: 'California State University, Long Beach',
+            dates: 'Expected May 2026',
+            honors: ["President's Honor List", 'University Honors Program'],
+            courses: ['Algorithms', 'Data Structures', 'OOP', 'Discrete Math', 'Operating Systems', 'Databases', 'Computer Architecture', 'Linear Algebra', 'System Programming', 'Assembly', 'Calculus 2'],
+            seal: { value: '3.9', label: 'GPA' },
+        },
+        {
+            id: 'cornell-ml',
+            title: 'Certificate in Machine Learning Foundations',
+            school: 'Cornell Tech · Break Through Tech AI',
+            dates: 'Summer 2024',
+            honors: ['Completed through Cornell’s BTT program at UCLA'],
+            courses: ['Machine learning theory', 'Supervised learning'],
+        },
+    ],
+    // image: under /public (omit → `initials` on the pastel frame)
+    clubs: [
+        {
+            id: 'ai-research',
+            role: 'Webmaster',
+            club: 'AI Research Club',
+            dates: '2023 – 2025',
+            description: 'Designed and developed the club’s official website. Kept meeting and event content up to date, with an accessible, responsive layout.',
+            image: '/club/AI_csulb_club.png',
+            url: 'https://csulbairesearch.github.io/AI_Research_Website/',
+        },
+        {
+            id: 'ai-x-data',
+            role: 'Web Lead',
+            club: 'AI X DATA',
+            dates: '2025',
+            description: 'Led the frontend development for MarinaHack 2024’s website. Designed and built the landing page.',
+            image: '/club/AI_Data.png',
+            url: 'https://datathoncsulb.netlify.app',
+        },
+        {
+            id: 'marinahack',
+            role: 'Web Co-Lead',
+            club: 'MarinaHack',
+            dates: '2024',
+            description: 'Co-led a team of 12 developers to design and build the MarinaHack 2024 website, overseeing page structure, feature rollout and an on-time launch.',
+            image: '/club/wicHackathon24.png',
+            url: 'https://marina-hacks-3-0-r96wre70m-victoriamacalis-projects.vercel.app',
+        },
+        {
+            id: 'wic',
+            role: 'Webmaster',
+            club: 'Women in Computing (WIC)',
+            dates: '2024 – 2025',
+            description: 'Redesigned and managed the WIC website to promote events, outreach and resources, with a modern, inclusive design.',
+            image: '/club/wic_csubl_club.png',
+            url: 'https://csulbwic.com',
+        },
+        {
+            id: 'bmes',
+            role: 'Backend Lead',
+            club: 'BMES – Medtronic 2026',
+            dates: '2025 – 2026',
+            description: 'Led backend development for a full-stack IoT healthcare system, designing a serverless architecture on AWS (Lambda, API Gateway, DynamoDB).',
+            initials: 'BMES',
+        },
+    ],
+};

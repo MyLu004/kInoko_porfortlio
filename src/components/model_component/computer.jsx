@@ -6,20 +6,25 @@ Source: https://sketchfab.com/3d-models/terminal-styled-computer-dumb-terminal-c
 Title: Terminal-styled Computer (Dumb Terminal)
 */
 
-import React, { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei';
 import {useFrame} from "@react-three/fiber";
+
+const initialRotation = Math.PI / 2;
+const duration = 1000;
+
+// Hooks can't be called conditionally, so the texture is loaded in its own component
+function ScreenTexture({ url }) {
+    const texture = useTexture(url);
+    return <meshBasicMaterial map={texture} toneMapped={false} />;
+}
 
 export function ComputerModel(props) {
     const { nodes, materials } = useGLTF('/assets/models/computer/scene.gltf');
 
-    const screenTexture = props.texture ? useTexture(props.texture) : null;
-
     const ref = useRef();
     const [startTime] = useState(() => performance.now());
 
-    const initialRotation = Math.PI / 2;
-    const duration = 1000;
     const txt = props.txt;
 
 
@@ -31,7 +36,7 @@ export function ComputerModel(props) {
         if (ref.current) {
             ref.current.rotation.y = baseRotationY + initialRotation;
         }
-    }, [txt]);
+    }, [txt, baseRotationY]);
 
 
     useFrame(() => {
@@ -297,7 +302,7 @@ export function ComputerModel(props) {
         material={materials.screen}
         position={[0, 3.074, 0.006]}
       >
-          <meshBasicMaterial map={screenTexture} toneMapped={false} />
+          {props.texture && <ScreenTexture url={props.texture} />}
       </mesh>
       <mesh
         castShadow
