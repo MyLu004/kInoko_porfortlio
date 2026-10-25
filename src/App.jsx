@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import Footer from "./components/layout/Footer.jsx";
 import Nav from "./components/layout/Nav.jsx";
 import Section from "./components/layout/Section.jsx";
@@ -43,6 +44,8 @@ const App = () => {
                 </Section>
             </main>
             <Footer contact={contact} />
+            {/* Vercel Web Analytics: only records on the deployed site, once enabled in the Vercel dashboard */}
+            <Analytics />
         </>
     );
 };

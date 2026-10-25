@@ -33,7 +33,7 @@
   .postcard-frame::before { content: ""; position: absolute; inset: 10px; border: 2px dashed theme(colors.doodle); border-radius: 14px; pointer-events: none; }
 }
 
+/* Smooth nav scrolling stays on here: the visitor started it by clicking a link */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }

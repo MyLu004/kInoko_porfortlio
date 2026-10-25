@@ -4,7 +4,7 @@ export const education = {
             id: 'csulb-bs',
             title: 'B.S. in Computer Science',
             school: 'California State University, Long Beach',
-            dates: 'Expected May 2026',
+            dates: 'Graduated May 2026',
             honors: ["President's Honor List", 'University Honors Program'],
             courses: ['Algorithms', 'Data Structures', 'OOP', 'Discrete Math', 'Operating Systems', 'Databases', 'Computer Architecture', 'Linear Algebra', 'System Programming', 'Assembly', 'Calculus 2'],
             seal: { value: '3.9', label: 'GPA' },
